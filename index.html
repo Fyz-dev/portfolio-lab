@@ -5,276 +5,346 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Vladislav Butenko — Full-Stack Developer. Персональне портфоліо."
+      content="Vladislav Butenko — Front-end Developer. Персональне портфоліо."
     />
     <meta name="author" content="Vladislav Butenko" />
     <title>Vladislav Butenko — Портфоліо</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-      <div>
-        <a href="index.html" aria-label="Головна">
-          <span>VB</span>
-          <span>Vladislav Butenko</span>
-        </a>
+    <div class="page">
+      <div id="top" aria-hidden="true"></div>
+      <!-- ===== HEADER ===== -->
+      <header class="site-header page-header">
+        <div class="header-inner">
+          <a href="index.html" class="logo" aria-label="Головна">
+            <span class="logo-mark">VB</span>
+            <span class="logo-text">Vladislav Butenko</span>
+          </a>
 
-        <nav aria-label="Головна навігація">
-          <ul>
-            <li><span>Головна</span></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><a href="projects.html">Проєкти</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ===== MAIN ===== -->
-    <main id="main-content">
-      <!-- Hero Section -->
-      <section id="hero">
-        <div>
-          <div>
-            <p>Front-end Developer</p>
-            <h1>
-              Будую <em>продукти</em>,<br />
-              що залишають<br />
-              <strong>враження</strong>
-            </h1>
-            <p>
-              Маю <strong>2+ роки</strong> досвіду у створенні веб-застосунків.
-              Спеціалізуюся на React / Next.js, TypeScript та сучасних
-              бекенд-рішеннях.
-            </p>
-            <div>
-              <a href="projects.html">Мої проєкти</a>
-              <a href="contacts.html">Зв'язатися</a>
-            </div>
-            <ul>
-              <li>Next.js</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>PostgreSQL</li>
-            </ul>
-          </div>
-          <div>
-            <figure>
-              <div></div>
-              <img
-                src="images/avatar.jpg"
-                alt="Vladislav Butenko — Front-end Developer"
-                width="340"
-                height="340"
-              />
-              <figcaption>Vladislav Butenko</figcaption>
-            </figure>
-            <div aria-hidden="true">
+          <nav class="nav" aria-label="Головна навігація">
+            <input
+              type="checkbox"
+              id="menu-toggle"
+              class="menu-toggle"
+              aria-hidden="true"
+            />
+            <label
+              for="menu-toggle"
+              class="hamburger"
+              aria-label="Відкрити меню"
+            >
               <span></span>
-              <span>Доступний для роботи</span>
+              <span></span>
+              <span></span>
+            </label>
+            <ul class="nav-list">
+              <li class="nav-item"><span class="nav-current">Головна</span></li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">Про мене</a>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Проєкти</a>
+              </li>
+              <li class="nav-item">
+                <a href="contacts.html" class="nav-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- ===== MAIN ===== -->
+      <main id="main-content" class="page-content">
+        <!-- Hero Section -->
+        <section class="hero section" id="hero">
+          <div class="container hero-layout">
+            <div class="hero-content">
+              <p class="hero-tag">Front-end Developer</p>
+              <h1 class="hero-title">
+                Будую <em>продукти</em>,<br />
+                що залишають<br />
+                <strong>враження</strong>
+              </h1>
+              <p class="hero-description">
+                Маю <strong>2+ роки</strong> досвіду у створенні
+                веб-застосунків. Спеціалізуюся на React / Next.js, TypeScript та
+                сучасних бекенд-рішеннях.
+              </p>
+              <div class="hero-actions">
+                <a href="projects.html" class="btn btn-primary">Мої проєкти</a>
+                <a href="contacts.html" class="btn btn-outline">Зв'язатися</a>
+              </div>
+              <ul class="hero-stack">
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+              </ul>
+            </div>
+            <div class="hero-visual">
+              <figure class="avatar-wrapper">
+                <div class="avatar-ring"></div>
+                <img
+                  src="images/avatar.jpg"
+                  alt="Vladislav Butenko — Front-end Developer"
+                  class="avatar-img"
+                  width="340"
+                  height="340"
+                />
+                <figcaption class="sr-only">Vladislav Butenko</figcaption>
+              </figure>
+              <div class="hero-badge" aria-hidden="true">
+                <span class="badge-dot"></span>
+                <span>Доступний для роботи</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- About Preview Section -->
-      <section id="about-preview">
-        <div>
-          <div>
-            <h2>Хто я?</h2>
-            <a href="about.html">Детальніше →</a>
-          </div>
-          <div>
-            <div>
-              <p>
-                Я <strong>Front-end Developer</strong> з Харкова, Україна. Маю
-                досвід розробки як веб-застосунків, так і десктопних програм на
-                <em>C++ (Qt)</em>, <em>C# (WPF, WinUI3)</em> та <em>Python</em>.
-              </p>
-              <p>
-                Я навчаюсь на спеціальності
-                <strong>Software Engineering</strong> у Національному
-                аерокосмічному університеті «ХАІ». Вільно спілкуюсь англійською
-                та українською.
-              </p>
-              <blockquote>
+        <!-- About Preview Section -->
+        <section class="section section-about-preview" id="about-preview">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">Хто я?</h2>
+              <a href="about.html" class="section-link">Детальніше &rarr;</a>
+            </div>
+            <div class="about-preview-grid">
+              <div class="about-preview-text">
                 <p>
-                  Код — це не просто інструкції для машини, це мистецтво
-                  вирішення проблем.
+                  Я <strong>Front-end Developer</strong> з Харкова, Україна. Маю
+                  досвід розробки як веб-застосунків, так і десктопних програм
+                  на <em>C++ (Qt)</em>, <em>C# (WPF, WinUI3)</em> та
+                  <em>Python</em>.
                 </p>
-              </blockquote>
+                <p>
+                  Я навчаюсь на спеціальності
+                  <strong>Software Engineering</strong> у Національному
+                  аерокосмічному університеті «ХАІ». Вільно спілкуюсь
+                  англійською та українською.
+                </p>
+                <blockquote class="home-quote">
+                  <p>
+                    Код — це не просто інструкції для машини, це мистецтво
+                    вирішення проблем.
+                  </p>
+                </blockquote>
+              </div>
+              <aside class="about-preview-aside">
+                <h3>Ключові навички</h3>
+                <ul class="skills-list">
+                  <li>
+                    <span class="skill-dot"></span>JavaScript / TypeScript
+                  </li>
+                  <li><span class="skill-dot"></span>React / Next.js</li>
+                  <li><span class="skill-dot"></span>Node.js / Nest.js</li>
+                  <li><span class="skill-dot"></span>PostgreSQL / MongoDB</li>
+                  <li>
+                    <span class="skill-dot"></span>Docker / Azure / GitHub
+                    Actions
+                  </li>
+                  <li><span class="skill-dot"></span>C# / C++ / Python</li>
+                </ul>
+              </aside>
             </div>
-            <aside>
-              <h3>Ключові навички</h3>
-              <ul>
-                <li>JavaScript / TypeScript</li>
-                <li>React / Next.js</li>
-                <li>Node.js / Nest.js</li>
-                <li>PostgreSQL / MongoDB</li>
-                <li>Docker / Azure / GitHub Actions</li>
-                <li>C# / C++ / Python</li>
-              </ul>
-            </aside>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Featured Projects Section -->
-      <section id="featured">
-        <div>
-          <div>
-            <h2>Вибрані проєкти</h2>
-            <a href="projects.html">Всі проєкти →</a>
+        <!-- Featured Projects Section -->
+        <section class="section section-featured" id="featured">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">Вибрані проєкти</h2>
+              <a href="projects.html" class="section-link"
+                >Всі проєкти &rarr;</a
+              >
+            </div>
+            <div class="featured-grid">
+              <article class="project-card project-card--featured">
+                <div class="card-tag">Jan 2025 &mdash; Now</div>
+                <h3 class="card-title">hanc AI</h3>
+                <p class="card-description">
+                  Subscription-based dashboard для AI-агентів, що здійснюють
+                  телефонні дзвінки. Включає аналітику, управління командами та
+                  мультимовний інтерфейс.
+                </p>
+                <ul class="card-stack">
+                  <li>Next.js</li>
+                  <li>Nest.js</li>
+                  <li>Firebase</li>
+                  <li>Twilio</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="card-tag">Feb 2025 &mdash; May 2025</div>
+                <h3 class="card-title">Qwitix</h3>
+                <p class="card-description">
+                  Платформа для продажу квитків з Google OAuth, Stripe та
+                  деплоєм через Docker на Azure VM з Nginx.
+                </p>
+                <ul class="card-stack">
+                  <li>Next.js</li>
+                  <li>ASP.NET</li>
+                  <li>Stripe</li>
+                  <li>Docker</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="card-tag">Oct 2023 &mdash; Mar 2024</div>
+                <h3 class="card-title">Funfy Forum</h3>
+                <p class="card-description">
+                  Reddit-подібний форум з деревоподібною системою коментарів,
+                  Supabase + recursive CTEs та Markdown-редактором.
+                </p>
+                <ul class="card-stack">
+                  <li>Next.js</li>
+                  <li>Supabase</li>
+                  <li>SWR</li>
+                  <li>MDX</li>
+                </ul>
+              </article>
+            </div>
           </div>
-          <div>
-            <article>
-              <div>Jan 2025 — Now</div>
-              <h3>Hanc AI</h3>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-cta" id="cta">
+          <div class="container">
+            <div class="cta-box">
+              <h2>Маєте цікавий проєкт?</h2>
               <p>
-                Subscription-based dashboard для AI-агентів, що здійснюють
-                телефонні дзвінки. Включає аналітику, управління командами та
-                мультимовний інтерфейс.
+                Я завжди відкритий до нових можливостей та цікавих викликів.
               </p>
-              <ul>
-                <li>Next.js</li>
-                <li>Nest.js</li>
-                <li>Firebase</li>
-                <li>Twilio</li>
-              </ul>
-            </article>
-            <article>
-              <div>Feb 2025 — May 2025</div>
-              <h3>Qwitix</h3>
-              <p>
-                Платформа для продажу квитків з Google OAuth, Stripe та деплоєм
-                через Docker на Azure VM з Nginx.
-              </p>
-              <ul>
-                <li>Next.js</li>
-                <li>ASP.NET</li>
-                <li>Stripe</li>
-                <li>Docker</li>
-              </ul>
-            </article>
-            <article>
-              <div>Oct 2023 — Mar 2024</div>
-              <h3>Funfy Forum</h3>
-              <p>
-                Reddit-подібний форум з деревоподібною системою коментарів,
-                Supabase + recursive CTEs та Markdown-редактором.
-              </p>
-              <ul>
-                <li>Next.js</li>
-                <li>Supabase</li>
-                <li>SWR</li>
-                <li>MDX</li>
-              </ul>
-            </article>
+              <a href="contacts.html" class="btn btn-primary">Написати мені</a>
+            </div>
           </div>
+        </section>
+      </main>
+
+      <aside class="page-sidebar social-nav" aria-label="Соціальні мережі">
+        <p class="social-nav-label">Мої соціальні мережі</p>
+        <ul class="social-nav-list">
+          <li>
+            <a
+              href="https://github.com/Fyz-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-nav-link"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:vladislav.butenko.dev@gmail.com"
+              class="social-nav-link"
+              aria-label="Email"
+              title="Email"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+380000000000"
+              class="social-nav-link"
+              aria-label="Телефон"
+              title="Телефон"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="site-footer page-footer">
+        <div class="container footer-inner">
+          <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
+          <nav aria-label="Footer навігація">
+            <ul class="footer-nav">
+              <li><a href="index.html">Головна</a></li>
+              <li><a href="about.html">Про мене</a></li>
+              <li><a href="projects.html">Проєкти</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </nav>
+          <p class="footer-contact">
+            <a href="mailto:vladislav.butenko.dev@gmail.com"
+              >vladislav.butenko.dev@gmail.com</a
+            >
+          </p>
         </div>
-      </section>
+      </footer>
+    </div>
 
-      <!-- CTA Section -->
-      <section id="cta">
-        <div>
-          <div>
-            <h2>Маєте цікавий проєкт?</h2>
-            <p>Я завжди відкритий до нових можливостей та цікавих викликів.</p>
-            <a href="contacts.html">Написати мені</a>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- Back to top button -->
+    <a href="#top" class="back-to-top" aria-label="Повернутися нагору"
+      >&#8593;</a
+    >
 
-    <aside aria-label="Соціальні мережі">
-      <p>Мої соціальні мережі</p>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/Fyz-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:vladislav.butenko.dev@gmail.com"
-            aria-label="Email"
-            title="Email"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+380000000000" aria-label="Телефон" title="Телефон">
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </aside>
+    <script>
+      var backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        function toggleBackToTop() {
+          if (window.scrollY > 320) {
+            backToTop.classList.add("visible");
+          } else {
+            backToTop.classList.remove("visible");
+          }
+        }
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <div>
-        <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
-        <nav aria-label="Footer навігація">
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><a href="projects.html">Проєкти</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </nav>
-        <p>
-          <a href="mailto:vladislav.butenko.dev@gmail.com"
-            >vladislav.butenko.dev@gmail.com</a
-          >
-        </p>
-      </div>
-    </footer>
+        toggleBackToTop();
+        window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      }
+    </script>
   </body>
 </html>
