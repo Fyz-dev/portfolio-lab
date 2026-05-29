@@ -1720,3 +1720,389 @@ nav ul li a:focus {
   color: var(--color-text-dim);
   border-top: 1px solid var(--color-border);
 }
+
+/* ===================================================
+   =====    CONTACTS PAGE                        =====
+   =================================================== */
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+}
+
+.contacts-info h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-methods {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+}
+
+.contact-method:hover {
+  border-color: var(--color-border-light);
+  transform: translateX(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-method-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dim);
+}
+
+.contact-method-value {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  word-break: break-all;
+}
+
+.contact-method-value:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contacts-aside {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.contacts-aside h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dim);
+  font-family: var(--font-mono);
+  margin-bottom: var(--spacing-md);
+}
+
+.contacts-aside p,
+.contacts-aside li {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.contacts-aside ul {
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.contacts-aside li::marker {
+  color: var(--color-primary);
+}
+
+/* Audio figure */
+.audio-figure {
+  margin-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-md);
+}
+
+.audio-figure figcaption {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-dim);
+  margin-bottom: var(--spacing-xs);
+}
+
+audio {
+  width: 100%;
+  filter: invert(1) hue-rotate(180deg);
+  border-radius: var(--border-radius);
+}
+
+/* ===================================================
+   ===== 22. FORM STYLES                         =====
+   =================================================== */
+.contacts-form-wrapper h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.form-fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.form-fieldset:focus-within {
+  border-color: var(--color-primary);
+}
+
+.form-fieldset legend {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dim);
+  padding-inline: var(--spacing-sm);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.required {
+  color: var(--color-primary);
+  margin-left: 2px;
+}
+
+/* Input & Textarea */
+input[type="text"],
+input[type="email"],
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.6rem var(--spacing-md);
+  background-color: var(--color-bg-card-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+  outline: none;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+.form-input:hover,
+.form-select:hover,
+.form-textarea:hover {
+  border-color: var(--color-text-dim);
+}
+
+/* Input focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+  transform: translateY(-1px);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-dim);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364dcc8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+
+.form-select option {
+  background-color: var(--color-bg-card-2);
+  color: var(--color-text);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.radio-label:hover {
+  color: var(--color-text);
+}
+
+.radio-label input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* Checkbox */
+.form-consent {
+  margin-top: var(--spacing-sm);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-label a:link,
+.checkbox-label a:visited {
+  color: var(--color-primary);
+}
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+/* ===================================================
+   =====     FOOTER                              =====
+   =================================================== */
+.site-footer {
+  background-color: var(--color-bg-2);
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--spacing-lg);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-nav > li > a:link,
+.footer-nav > li > a:visited {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+}
+
+.footer-nav > li > a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-contact a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-dim);
+}
+
+.footer-contact a:hover {
+  color: var(--color-primary);
+}
+
+/* ===================================================
+   ===== BACK TO TOP                               ===
+   =================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:link,
+.back-to-top:visited {
+  color: var(--color-primary);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--color-primary-glow);
+  text-decoration: none;
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
