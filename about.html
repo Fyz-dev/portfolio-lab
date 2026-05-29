@@ -5,431 +5,525 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Про мене — Vladislav Butenko, Full-Stack Developer. Освіта, навички та досвід."
+      content="Про мене — Vladislav Butenko, Front-end Developer. Освіта, навички та досвід."
     />
     <meta name="author" content="Vladislav Butenko" />
     <title>Про мене — Vladislav Butenko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-      <div>
-        <a href="index.html" aria-label="Головна">
-          <span>VB</span>
-          <span>Vladislav Butenko</span>
-        </a>
+    <div class="page">
+      <div id="top" aria-hidden="true"></div>
+      <!-- ===== HEADER ===== -->
+      <header class="site-header page-header">
+        <div class="header-inner">
+          <a href="index.html" class="logo" aria-label="Головна">
+            <span class="logo-mark">VB</span>
+            <span class="logo-text">Vladislav Butenko</span>
+          </a>
 
-        <nav aria-label="Головна навігація">
-          <ul>
-            <li>
-              <a href="index.html">Головна</a>
-            </li>
-            <li>
-              <span>Про мене</span>
-            </li>
-            <li>
-              <a href="projects.html">Проєкти</a>
-            </li>
-            <li>
-              <a href="contacts.html">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          <nav class="nav" aria-label="Головна навігація">
+            <input
+              type="checkbox"
+              id="menu-toggle"
+              class="menu-toggle"
+              aria-hidden="true"
+            />
+            <label
+              for="menu-toggle"
+              class="hamburger"
+              aria-label="Відкрити меню"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Головна</a>
+              </li>
+              <li class="nav-item">
+                <span class="nav-current">Про мене</span>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Проєкти</a>
+              </li>
+              <li class="nav-item">
+                <a href="contacts.html" class="nav-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <!-- ===== MAIN ===== -->
-    <main id="main-content">
-      <!-- Page Hero -->
-      <section>
-        <div>
-          <p>About me</p>
-          <h1>Про мене</h1>
-          <p>
-            Front-end Developer з пристрастю до чистого коду, продуктового
-            мислення та складних технічних задач.
+      <!-- ===== MAIN ===== -->
+      <main id="main-content" class="page-content">
+        <!-- Page Hero -->
+        <section class="page-hero section">
+          <div class="container">
+            <p class="page-hero-tag">About me</p>
+            <h1 class="page-hero-title">Про мене</h1>
+            <p class="page-hero-description">
+              Front-end Developer з пристрастю до чистого коду, продуктового
+              мислення та складних технічних задач.
+            </p>
+          </div>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="section" id="bio">
+          <div class="container about-layout">
+            <div class="about-main">
+              <article class="about-bio">
+                <h2>Загальна інформація</h2>
+                <p>
+                  Мене звати <strong>Vladislav Butenko</strong> — я Front-end
+                  Developer з Харкова, Україна. Маю
+                  <strong>2+ роки</strong> комерційного досвіду у створенні
+                  веб-застосунків різного масштабу: від стартапів до
+                  корпоративних платформ.
+                </p>
+                <p>
+                  Окрім веб-розробки, маю практичний досвід розробки десктопних
+                  застосунків на
+                  <em>C++ (Qt)</em>, <em>C# (WPF, WinUI3)</em> та
+                  <em>Python (Qt)</em>. Я відповідальний, маю відмінні
+                  комунікативні навички та прагнення вирішувати складні технічні
+                  проблеми. Швидко освоюю нові технології та ефективно працюю як
+                  в команді, так і самостійно.
+                </p>
+                <p>
+                  Вільно спілкуюся <em>англійською</em>, <em>українською</em> та
+                  <em>російською</em> мовами.
+                </p>
+
+                <blockquote class="about-quote">
+                  <p>
+                    Відповідальність, що тобі не по силах — це найкраще місце
+                    для зростання.
+                  </p>
+                </blockquote>
+              </article>
+
+              <!-- Education Section -->
+              <section id="education">
+                <h2>Освіта</h2>
+
+                <div class="edu-item">
+                  <h3>Національний аерокосмічний університет «ХАІ»</h3>
+                  <p class="edu-meta">
+                    Спеціальність: <strong>Software Engineering</strong>
+                  </p>
+                  <p>
+                    Вивчення теорії алгоритмів, архітектур програмних систем,
+                    баз даних та сучасних методологій розробки ПЗ.
+                  </p>
+                </div>
+
+                <div class="edu-item">
+                  <h3>Харківський радіотехнічний коледж</h3>
+                  <p class="edu-meta">
+                    Спеціальність: <strong>Software Engineering</strong>
+                  </p>
+                  <p>
+                    Базова технічна освіта з програмування, комп'ютерних мереж
+                    та системного аналізу.
+                  </p>
+                </div>
+              </section>
+
+              <!-- Skills Table -->
+              <section id="skills-table">
+                <h2>Технічні навички</h2>
+                <div class="table-wrapper">
+                  <table class="skills-table">
+                    <caption>
+                      Мої технічні навички та рівень володіння
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Технологія</th>
+                        <th scope="col">Категорія</th>
+                        <th scope="col">Рівень</th>
+                        <th scope="col">Досвід</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>JavaScript / TypeScript</td>
+                        <td>Frontend</td>
+                        <td>
+                          <span class="level-badge level-advanced"
+                            >Просунутий</span
+                          >
+                        </td>
+                        <td>2+ роки</td>
+                      </tr>
+                      <tr>
+                        <td>React / Next.js</td>
+                        <td>Frontend</td>
+                        <td>
+                          <span class="level-badge level-advanced"
+                            >Просунутий</span
+                          >
+                        </td>
+                        <td>2+ роки</td>
+                      </tr>
+                      <tr>
+                        <td>TailwindCSS / SASS</td>
+                        <td>CSS</td>
+                        <td>
+                          <span class="level-badge level-advanced"
+                            >Просунутий</span
+                          >
+                        </td>
+                        <td>2+ роки</td>
+                      </tr>
+                      <tr>
+                        <td>Nest.js / ASP.NET</td>
+                        <td>Backend</td>
+                        <td>
+                          <span class="level-badge level-intermediate"
+                            >Середній</span
+                          >
+                        </td>
+                        <td>1.5 роки</td>
+                      </tr>
+                      <tr>
+                        <td>PostgreSQL / MongoDB</td>
+                        <td>База даних</td>
+                        <td>
+                          <span class="level-badge level-intermediate"
+                            >Середній</span
+                          >
+                        </td>
+                        <td>1.5 роки</td>
+                      </tr>
+                      <tr>
+                        <td>Docker / Nginx / Azure</td>
+                        <td>DevOps</td>
+                        <td>
+                          <span class="level-badge level-intermediate"
+                            >Середній</span
+                          >
+                        </td>
+                        <td>1 рік</td>
+                      </tr>
+                      <tr>
+                        <td>C# (WPF, WinUI3)</td>
+                        <td>Desktop</td>
+                        <td>
+                          <span class="level-badge level-intermediate"
+                            >Середній</span
+                          >
+                        </td>
+                        <td>1.5 роки</td>
+                      </tr>
+                      <tr>
+                        <td>C++ (Qt)</td>
+                        <td>Desktop / System</td>
+                        <td>
+                          <span class="level-badge level-beginner"
+                            >Початківець</span
+                          >
+                        </td>
+                        <td>1 рік</td>
+                      </tr>
+                      <tr>
+                        <td>Python 3</td>
+                        <td>Scripting</td>
+                        <td>
+                          <span class="level-badge level-intermediate"
+                            >Середній</span
+                          >
+                        </td>
+                        <td>1 рік</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <!-- Terminology List -->
+              <section id="terms">
+                <h2>Інструменти та підходи</h2>
+                <dl class="terms-list">
+                  <dt>Monorepo</dt>
+                  <dd>
+                    PNPM Workspaces + Turborepo для управління великими кодовими
+                    базами
+                  </dd>
+                  <dt>Testing</dt>
+                  <dd>Jest (unit), MSTest (.NET), E2E-тестування</dd>
+                  <dt>Архітектура</dt>
+                  <dd>SOLID, REST, GraphQL, OAuth 2.0, JWT</dd>
+                  <dt>Формати</dt>
+                  <dd>XML, CSV, JSON, Markdown</dd>
+                  <dt>Дизайн</dt>
+                  <dd>Figma, CorelDRAW, Adobe Photoshop</dd>
+                  <dt>Управління</dt>
+                  <dd>Git, GitHub Actions, Jira, Trello, Postman</dd>
+                </dl>
+              </section>
+            </div>
+            <!-- /.about-main -->
+
+            <!-- Sidebar -->
+            <aside class="about-sidebar">
+              <div class="sidebar-card">
+                <h3>Особисто про мене</h3>
+                <figure class="sidebar-avatar">
+                  <img
+                    src="images/avatar.jpg"
+                    alt="Vladislav Butenko — Front-end Developer"
+                    width="120"
+                    height="120"
+                  />
+                  <figcaption>Vladislav Butenko</figcaption>
+                </figure>
+                <p>
+                  Поза роботою я захоплена людина, що завжди намагається знайти
+                  баланс між технічною досконалістю та творчістю.
+                </p>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Цікавий факт</h3>
+                <p>
+                  Я розробив <strong>npm-пакет</strong> веб-компонентів на Lit
+                  для вбудовування AI-дзвінок-віджетів на зовнішніх сайтах — з
+                  CDN-збірками та React-обгортками.
+                </p>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Мови</h3>
+                <ul class="lang-list">
+                  <li>
+                    <span class="lang-name">Англійська</span>
+                    <span class="lang-level">Вільно</span>
+                  </li>
+                  <li>
+                    <span class="lang-name">Українська</span>
+                    <span class="lang-level">Рідна</span>
+                  </li>
+                  <li>
+                    <span class="lang-name">Російська</span>
+                    <span class="lang-level">Вільно</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sidebar-card">
+                <h3>Контакти</h3>
+                <ul class="contact-quick">
+                  <li>
+                    <a href="mailto:vladislav.butenko.dev@gmail.com">
+                      vladislav.butenko.dev@gmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="contacts.html">Форма зворотного зв'язку &rarr;</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+          <!-- /.about-layout -->
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section section-experience" id="experience">
+          <div class="container">
+            <h2 class="section-title">Досвід роботи</h2>
+            <ol class="experience-list">
+              <li class="exp-item">
+                <div class="exp-meta">
+                  <span class="exp-date">Jan 2025 — Зараз</span>
+                  <span class="exp-badge">Current</span>
+                </div>
+                <h3 class="exp-title">Frontend Developer</h3>
+                <p class="exp-company">hanc AI</p>
+                <p class="exp-desc">
+                  Розробка AI-платформи для управління телефонними агентами.
+                  Реалізація інтерфейсу на Next.js, інтеграція з Twilio,
+                  Firebase Auth, розробка npm-пакету веб-компонентів на Lit,
+                  мультимовний інтерфейс через next-intl.
+                </p>
+              </li>
+              <li class="exp-item">
+                <div class="exp-meta">
+                  <span class="exp-date">Feb 2025 — May 2025</span>
+                </div>
+                <h3 class="exp-title">Front-end Developer</h3>
+                <p class="exp-company">Qwitix</p>
+                <p class="exp-desc">
+                  Платформа продажу квитків: Next.js frontend + ASP.NET backend.
+                  Google OAuth, Stripe SDK, Docker-деплой на Azure VM через ACR
+                  з Nginx reverse proxy.
+                </p>
+              </li>
+              <li class="exp-item">
+                <div class="exp-meta">
+                  <span class="exp-date">Oct 2023 — Mar 2024</span>
+                </div>
+                <h3 class="exp-title">Front-end Developer</h3>
+                <p class="exp-company">Funfy Forum</p>
+                <p class="exp-desc">
+                  Reddit-подібний форум: Next.js + Supabase, рекурсивні CTE для
+                  коментарів, SWR кешування, Markdown-редактор.
+                </p>
+              </li>
+              <li class="exp-item">
+                <div class="exp-meta">
+                  <span class="exp-date">Aug 2023 — Sep 2023</span>
+                </div>
+                <h3 class="exp-title">Frontend Developer</h3>
+                <p class="exp-company">Pureview Tab</p>
+                <p class="exp-desc">
+                  Chrome-розширення для заміни нової вкладки: React + MobX,
+                  FloatingUI, інтеграція з Unsplash API.
+                </p>
+              </li>
+              <li class="exp-item">
+                <div class="exp-meta">
+                  <span class="exp-date">Apr 2023 — Jun 2023</span>
+                </div>
+                <h3 class="exp-title">GunStore</h3>
+                <p class="exp-company">Курсова робота 3-го курсу</p>
+                <p class="exp-desc">
+                  Десктопний додаток "Магазин зброї": авторизація, головне вікно
+                  адміна та касира, реалізація ролей через MySQL. Перший досвід
+                  з Qt framework.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+
+      <aside class="page-sidebar social-nav" aria-label="Соціальні мережі">
+        <p class="social-nav-label">Мої соціальні мережі</p>
+        <ul class="social-nav-list">
+          <li>
+            <a
+              href="https://github.com/Fyz-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-nav-link"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:vladislav.butenko.dev@gmail.com"
+              class="social-nav-link"
+              aria-label="Email"
+              title="Email"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+380000000000"
+              class="social-nav-link"
+              aria-label="Телефон"
+              title="Телефон"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="site-footer page-footer">
+        <div class="container footer-inner">
+          <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
+          <nav aria-label="Footer навігація">
+            <ul class="footer-nav">
+              <li><a href="index.html">Головна</a></li>
+              <li><a href="about.html">Про мене</a></li>
+              <li><a href="projects.html">Проєкти</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </nav>
+          <p class="footer-contact">
+            <a href="mailto:vladislav.butenko.dev@gmail.com"
+              >vladislav.butenko.dev@gmail.com</a
+            >
           </p>
         </div>
-      </section>
+      </footer>
+    </div>
 
-      <!-- Bio Section -->
-      <section id="bio">
-        <div>
-          <div>
-            <article>
-              <h2>Загальна інформація</h2>
-              <p>
-                Мене звати <strong>Vladislav Butenko</strong> — я Front-end
-                Developer з Харкова, Україна. Маю
-                <strong>2+ роки</strong> комерційного досвіду у створенні
-                веб-застосунків різного масштабу: від стартапів до корпоративних
-                платформ.
-              </p>
-              <p>
-                Окрім веб-розробки, маю практичний досвід розробки десктопних
-                застосунків на
-                <em>C++ (Qt)</em>, <em>C# (WPF, WinUI3)</em> та
-                <em>Python (Qt)</em>. Я відповідальний, маю відмінні
-                комунікативні навички та прагнення вирішувати складні технічні
-                проблеми. Швидко освоюю нові технології та ефективно працюю як в
-                команді, так і самостійно.
-              </p>
-              <p>
-                Вільно спілкуюся <em>англійською</em>, <em>українською</em> та
-                <em>російською</em> мовами.
-              </p>
+    <a href="#top" class="back-to-top" aria-label="Повернутися нагору"
+      >&#8593;</a
+    >
 
-              <blockquote>
-                <p>
-                  Відповідальність, що тобі не по силах — це найкраще місце для
-                  зростання.
-                </p>
-              </blockquote>
-            </article>
+    <script>
+      var backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        function toggleBackToTop() {
+          if (window.scrollY > 320) {
+            backToTop.classList.add("visible");
+          } else {
+            backToTop.classList.remove("visible");
+          }
+        }
 
-            <!-- Education Section -->
-            <section id="education">
-              <h2>Освіта</h2>
-
-              <div>
-                <h3>Національний аерокосмічний університет «ХАІ»</h3>
-                <p>Спеціальність: <strong>Software Engineering</strong></p>
-                <p>
-                  Вивчення теорії алгоритмів, архітектур програмних систем, баз
-                  даних та сучасних методологій розробки ПЗ.
-                </p>
-              </div>
-
-              <div>
-                <h3>Харківський радіотехнічний коледж</h3>
-                <p>Спеціальність: <strong>Software Engineering</strong></p>
-                <p>
-                  Базова технічна освіта з програмування, комп'ютерних мереж та
-                  системного аналізу.
-                </p>
-              </div>
-            </section>
-
-            <!-- Skills Table -->
-            <section id="skills-table">
-              <h2>Технічні навички</h2>
-              <div>
-                <table>
-                  <caption>
-                    Мої технічні навички та рівень володіння
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Технологія</th>
-                      <th scope="col">Категорія</th>
-                      <th scope="col">Рівень</th>
-                      <th scope="col">Досвід</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>JavaScript / TypeScript</td>
-                      <td>Frontend</td>
-                      <td>Просунутий</td>
-                      <td>2+ роки</td>
-                    </tr>
-                    <tr>
-                      <td>React / Next.js</td>
-                      <td>Frontend</td>
-                      <td>Просунутий</td>
-                      <td>2+ роки</td>
-                    </tr>
-                    <tr>
-                      <td>TailwindCSS / SASS</td>
-                      <td>CSS</td>
-                      <td>Просунутий</td>
-                      <td>2+ роки</td>
-                    </tr>
-                    <tr>
-                      <td>Nest.js / ASP.NET</td>
-                      <td>Backend</td>
-                      <td>Середній</td>
-                      <td>1.5 роки</td>
-                    </tr>
-                    <tr>
-                      <td>PostgreSQL / MongoDB</td>
-                      <td>База даних</td>
-                      <td>Середній</td>
-                      <td>1.5 роки</td>
-                    </tr>
-                    <tr>
-                      <td>Docker / Nginx / Azure</td>
-                      <td>DevOps</td>
-                      <td>Середній</td>
-                      <td>1 рік</td>
-                    </tr>
-                    <tr>
-                      <td>C# (WPF, WinUI3)</td>
-                      <td>Desktop</td>
-                      <td>Середній</td>
-                      <td>1.5 роки</td>
-                    </tr>
-                    <tr>
-                      <td>C++ (Qt)</td>
-                      <td>Desktop / System</td>
-                      <td>Початківець</td>
-                      <td>1 рік</td>
-                    </tr>
-                    <tr>
-                      <td>Python 3</td>
-                      <td>Scripting</td>
-                      <td>Середній</td>
-                      <td>1 рік</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-
-            <!-- Terminology List -->
-            <section id="terms">
-              <h2>Інструменти та підходи</h2>
-              <dl>
-                <dt>Monorepo</dt>
-                <dd>
-                  PNPM Workspaces + Turborepo для управління великими кодовими
-                  базами
-                </dd>
-                <dt>Testing</dt>
-                <dd>Jest (unit), MSTest (.NET), E2E-тестування</dd>
-                <dt>Архітектура</dt>
-                <dd>SOLID, REST, GraphQL, OAuth 2.0, JWT</dd>
-                <dt>Формати</dt>
-                <dd>XML, CSV, JSON, Markdown</dd>
-                <dt>Дизайн</dt>
-                <dd>Figma, CorelDRAW, Adobe Photoshop</dd>
-                <dt>Управління</dt>
-                <dd>Git, GitHub Actions, Jira, Trello, Postman</dd>
-              </dl>
-            </section>
-          </div>
-
-          <!-- Sidebar -->
-          <aside>
-            <div>
-              <h3>Особисто про мене</h3>
-              <figure>
-                <img
-                  src="images/avatar.jpg"
-                  alt="Vladislav Butenko — Front-end Developer"
-                  width="120"
-                  height="120"
-                />
-                <figcaption>Vladislav Butenko</figcaption>
-              </figure>
-              <p>
-                Поза роботою я захоплена людина, що завжди намагається знайти
-                баланс між технічною досконалістю та творчістю.
-              </p>
-            </div>
-
-            <div>
-              <h3>Цікавий факт</h3>
-              <p>
-                Я розробив <strong>npm-пакет</strong> веб-компонентів на Lit для
-                вбудовування AI-дзвінок-віджетів на зовнішніх сайтах — з
-                CDN-збірками та React-обгортками.
-              </p>
-            </div>
-
-            <div>
-              <h3>Мови</h3>
-              <ul>
-                <li>
-                  <span>Англійська</span>
-                  <span>Вільно</span>
-                </li>
-                <li>
-                  <span>Українська</span>
-                  <span>Рідна</span>
-                </li>
-                <li>
-                  <span>Російська</span>
-                  <span>Вільно</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Контакти</h3>
-              <ul>
-                <li>
-                  <a href="mailto:vladislav.butenko.dev@gmail.com">
-                    vladislav.butenko.dev@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <a href="contacts.html">Форма зворотного зв'язку →</a>
-                </li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience">
-        <div>
-          <h2>Досвід роботи</h2>
-          <ol>
-            <li>
-              <div>
-                <span>Jan 2025 — Зараз</span>
-                <span>Current</span>
-              </div>
-              <h3>Frontend Developer</h3>
-              <p>Hanc AI</p>
-              <p>
-                Розробка AI-платформи для управління телефонними агентами.
-                Реалізація інтерфейсу на Next.js, інтеграція з Twilio, Firebase
-                Auth, розробка npm-пакету веб-компонентів на Lit, мультимовний
-                інтерфейс через next-intl.
-              </p>
-            </li>
-            <li>
-              <div>
-                <span>Feb 2025 — May 2025</span>
-              </div>
-              <h3>Front-end Developer</h3>
-              <p>Qwitix</p>
-              <p>
-                Платформа продажу квитків: Next.js frontend + ASP.NET backend.
-                Google OAuth, Stripe SDK, Docker-деплой на Azure VM через ACR з
-                Nginx reverse proxy.
-              </p>
-            </li>
-            <li>
-              <div>
-                <span>Oct 2023 — Mar 2024</span>
-              </div>
-              <h3>Front-end Developer</h3>
-              <p>Funfy Forum</p>
-              <p>
-                Reddit-подібний форум: Next.js + Supabase, рекурсивні CTE для
-                коментарів, SWR кешування, Markdown-редактор.
-              </p>
-            </li>
-            <li>
-              <div>
-                <span>Aug 2023 — Sep 2023</span>
-              </div>
-              <h3>Frontend Developer</h3>
-              <p>Pureview Tab</p>
-              <p>
-                Chrome-розширення для заміни нової вкладки: React + MobX,
-                FloatingUI, інтеграція з Unsplash API.
-              </p>
-            </li>
-            <li>
-              <div>
-                <span>Apr 2023 — Jun 2023</span>
-              </div>
-              <h3>GunStore</h3>
-              <p>Курсова робота 3-го курсу</p>
-              <p>
-                Десктопний додаток "Магазин зброї": авторизація, головне вікно
-                адміна та касира, реалізація ролей через MySQL. Перший досвід з
-                Qt framework.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
-    </main>
-
-    <aside aria-label="Соціальні мережі">
-      <p>Мої соціальні мережі</p>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/Fyz-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:vladislav.butenko.dev@gmail.com"
-            aria-label="Email"
-            title="Email"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+380000000000" aria-label="Телефон" title="Телефон">
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <div>
-        <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
-        <nav aria-label="Footer навігація">
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><a href="projects.html">Проєкти</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </nav>
-        <p>
-          <a href="mailto:vladislav.butenko.dev@gmail.com"
-            >vladislav.butenko.dev@gmail.com</a
-          >
-        </p>
-      </div>
-    </footer>
+        toggleBackToTop();
+        window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      }
+    </script>
   </body>
 </html>
