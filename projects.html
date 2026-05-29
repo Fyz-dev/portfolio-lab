@@ -5,156 +5,269 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Проєкти Vladislav Butenko — Full-Stack Developer. Мої комерційні та особисті проєкти."
+      content="Проєкти Vladislav Butenko — Front-end Developer. Мої комерційні та особисті проєкти."
     />
     <meta name="author" content="Vladislav Butenko" />
     <title>Проєкти — Vladislav Butenko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-      <div>
-        <a href="index.html" aria-label="Головна">
-          <span>VB</span>
-          <span>Vladislav Butenko</span>
-        </a>
+    <div class="page">
+      <div id="top" aria-hidden="true"></div>
+      <!-- ===== HEADER ===== -->
+      <header class="site-header page-header">
+        <div class="header-inner">
+          <a href="index.html" class="logo" aria-label="Головна">
+            <span class="logo-mark">VB</span>
+            <span class="logo-text">Vladislav Butenko</span>
+          </a>
 
-        <nav aria-label="Головна навігація">
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><span>Проєкти</span></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ===== MAIN ===== -->
-    <main id="main-content">
-      <!-- Page Hero -->
-      <section>
-        <div>
-          <p>Work</p>
-          <h1>Проєкти</h1>
-          <p>
-            Комерційні та особисті проєкти, що відображають мій досвід та підхід
-            до розробки.
-          </p>
+          <nav class="nav" aria-label="Головна навігація">
+            <input
+              type="checkbox"
+              id="menu-toggle"
+              class="menu-toggle"
+              aria-hidden="true"
+            />
+            <label
+              for="menu-toggle"
+              class="hamburger"
+              aria-label="Відкрити меню"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">Про мене</a>
+              </li>
+              <li class="nav-item"><span class="nav-current">Проєкти</span></li>
+              <li class="nav-item">
+                <a href="contacts.html" class="nav-link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </section>
+      </header>
 
-      <!-- Featured Project — Hanc AI -->
-      <section id="hanc-ai">
-        <div>
-          <h2>Комерційні проєкти</h2>
+      <!-- ===== MAIN ===== -->
+      <main id="main-content" class="page-content">
+        <!-- Page Hero -->
+        <section class="page-hero section">
+          <div class="container">
+            <p class="page-hero-tag">Work</p>
+            <h1 class="page-hero-title">Проєкти</h1>
+            <p class="page-hero-description">
+              Комерційні та особисті проєкти, що відображають мій досвід та
+              підхід до розробки.
+            </p>
+          </div>
+        </section>
 
-          <article id="project-hanc-ai">
-            <div>
-              <div>
-                <span>Jan 2025 — Now</span>
-                <h3>
-                  Hanc AI
-                  <a
-                    href="https://hanc.ai/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Відкрити сайт Hanc AI"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                  </a>
-                </h3>
-                <p>Frontend Developer (Next.js / Astro / Web Components)</p>
-              </div>
-              <span>Активний</span>
-            </div>
+        <!-- Featured Project — hanc AI -->
+        <section class="section" id="hanc-ai">
+          <div class="container">
+            <h2 class="section-title">Комерційні проєкти</h2>
 
-            <div>
-              <div>
-                <h4>Опис проєкту</h4>
-                <p>
-                  Subscription-based dashboard-платформа для створення та
-                  управління AI-агентами, що здійснюють та приймають телефонні
-                  дзвінки. Збір аналітики дзвінків, організація даних розмов.
-                  Розширені функції управління командами: створення робочих
-                  просторів, рольовий контроль доступу, купівля номерів
-                  телефону.
-                </p>
-                <h4>Мої задачі</h4>
-                <ul>
-                  <li>Розробка нових UI-функцій на Next.js</li>
-                  <li>Інтеграція Twilio для функціоналу дзвінків</li>
-                  <li>Реєстрація та автентифікація через Firebase</li>
-                  <li>Розробка Markdown-редактора промптів на TipTap</li>
-                  <li>Інтерактивні візуалізації даних через Mantine</li>
-                  <li>Мультимовний інтерфейс через next-intl</li>
-                  <li>
-                    Розробка npm-пакету веб-компонентів на Lit з CDN-збірками та
-                    React-обгортками
-                  </li>
-                  <li>
-                    Публікація та підтримка пакету в npm (Changesets, semantic
-                    versioning)
-                  </li>
-                </ul>
-              </div>
-              <aside>
+            <article class="project-full" id="project-hanc-ai">
+              <div class="project-full-header">
                 <div>
-                  <h4>Стек технологій</h4>
-                  <ul>
-                    <li>Next.js</li>
-                    <li>Nest.js</li>
-                    <li>Firebase Auth</li>
-                    <li>Twilio Voice SDK</li>
-                    <li>TailwindCSS / SASS</li>
-                    <li>MantineUI</li>
-                    <li>TipTap</li>
-                    <li>TanStack Query</li>
-                    <li>Astro</li>
-                    <li>Lit / @lit/react</li>
-                    <li>next-intl</li>
-                    <li>Zustand</li>
-                    <li>Zod</li>
-                    <li>Changesets</li>
+                  <span class="project-full-tag">Jan 2025 &mdash; Now</span>
+                  <h3 class="project-full-title">
+                    hanc AI
+                    <a
+                      href="https://hanc.ai/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-gh-link"
+                      aria-label="Відкрити сайт hanc AI"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </h3>
+                  <p class="project-full-role">
+                    Frontend Developer (Next.js / Astro / Web Components)
+                  </p>
+                </div>
+                <span class="project-status project-status--active"
+                  >Активний</span
+                >
+              </div>
+
+              <div class="project-full-layout">
+                <div class="project-full-main">
+                  <h4>Опис проєкту</h4>
+                  <p>
+                    Subscription-based dashboard-платформа для створення та
+                    управління AI-агентами, що здійснюють та приймають телефонні
+                    дзвінки. Збір аналітики дзвінків, організація даних розмов.
+                    Розширені функції управління командами: створення робочих
+                    просторів, рольовий контроль доступу, купівля номерів
+                    телефону.
+                  </p>
+                  <h4>Мої задачі</h4>
+                  <ul class="project-tasks">
+                    <li>Розробка нових UI-функцій на Next.js</li>
+                    <li>Інтеграція Twilio для функціоналу дзвінків</li>
+                    <li>Реєстрація та автентифікація через Firebase</li>
+                    <li>Розробка Markdown-редактора промптів на TipTap</li>
+                    <li>Інтерактивні візуалізації даних через Mantine</li>
+                    <li>Мультимовний інтерфейс через next-intl</li>
+                    <li>
+                      Розробка npm-пакету веб-компонентів на Lit з CDN-збірками
+                      та React-обгортками
+                    </li>
+                    <li>
+                      Публікація та підтримка пакету в npm (Chancesets, semantic
+                      versioning)
+                    </li>
                   </ul>
                 </div>
-              </aside>
-            </div>
-          </article>
+                <aside class="project-full-aside">
+                  <div class="tech-stack-card">
+                    <h4>Стек технологій</h4>
+                    <ul class="tech-stack-list">
+                      <li>Next.js</li>
+                      <li>Nest.js</li>
+                      <li>Firebase Auth</li>
+                      <li>Twilio Voice SDK</li>
+                      <li>TailwindCSS / SASS</li>
+                      <li>MantineUI</li>
+                      <li>TipTap</li>
+                      <li>TanStack Query</li>
+                      <li>Astro</li>
+                      <li>Lit / @lit/react</li>
+                      <li>next-intl</li>
+                      <li>Zustand</li>
+                      <li>Zod</li>
+                      <li>Chancesets</li>
+                    </ul>
+                  </div>
+                </aside>
+              </div>
+            </article>
 
-          <!-- Qwitix -->
-          <article id="project-qwitix">
-            <div>
-              <div>
-                <span>Feb 2025 — May 2025</span>
-                <h3>
-                  Qwitix
+            <!-- Qwitix -->
+            <article class="project-full" id="project-qwitix">
+              <div class="project-full-header">
+                <div>
+                  <span class="project-full-tag"
+                    >Feb 2025 &mdash; May 2025</span
+                  >
+                  <h3 class="project-full-title">
+                    Qwitix
+                    <a
+                      href="https://github.com/Fyz-dev/qwitix-web"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="project-gh-link"
+                      aria-label="GitHub репозиторій Qwitix"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                        />
+                      </svg>
+                    </a>
+                  </h3>
+                  <p class="project-full-role">Front-end Developer</p>
+                </div>
+              </div>
+
+              <div class="project-full-layout">
+                <div class="project-full-main">
+                  <h4>Опис проєкту</h4>
+                  <p>
+                    Платформа для продажу квитків з авторизацією через Google та
+                    інтеграцією платіжної системи Stripe. Backend на ASP.NET з
+                    дотриманням принципів SOLID, покрито unit-тестами. Frontend
+                    на Next.js з TypeScript-типами з Swagger. Docker-деплой на
+                    Azure VM через ACR з Nginx reverse proxy.
+                  </p>
+                  <h4>Архітектурні рішення</h4>
+                  <ul class="project-tasks">
+                    <li>Google OAuth 2.0 для авторизації</li>
+                    <li>Stripe SDK для платежів</li>
+                    <li>SOLID-архітектура ASP.NET backend</li>
+                    <li>MSTest unit-тести</li>
+                    <li>Nginx reverse proxy на Azure VM</li>
+                    <li>Azure Container Registry + Docker</li>
+                  </ul>
+                </div>
+                <aside class="project-full-aside">
+                  <div class="tech-stack-card">
+                    <h4>Стек технологій</h4>
+                    <ul class="tech-stack-list">
+                      <li>Next.js</li>
+                      <li>ASP.NET</li>
+                      <li>Stripe SDK</li>
+                      <li>MongoDB</li>
+                      <li>Azure Blob Storage</li>
+                      <li>Azure VM / ACR</li>
+                      <li>Docker / Nginx</li>
+                      <li>ShadcnUI / DiceUI</li>
+                      <li>TanStack Query</li>
+                      <li>MSTest</li>
+                    </ul>
+                  </div>
+                </aside>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Personal Projects -->
+        <section class="section section-personal" id="personal-projects">
+          <div class="container">
+            <h2 class="section-title">Особисті проєкти</h2>
+            <div class="projects-grid">
+              <article class="project-card" id="project-gunstore">
+                <div class="card-tag">Apr 2023 &mdash; Jun 2023</div>
+                <h3 class="card-title">
+                  GunStore
                   <a
-                    href="https://github.com/Fyz-dev/qwitix-web"
+                    href="https://github.com/Fyz-dev/GunStore"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="GitHub репозиторій Qwitix"
+                    class="project-gh-link"
+                    aria-label="GitHub репозиторій GunStore"
                   >
                     <svg
                       aria-hidden="true"
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
@@ -164,292 +277,250 @@
                     </svg>
                   </a>
                 </h3>
-                <p>Front-end Developer</p>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <h4>Опис проєкту</h4>
-                <p>
-                  Платформа для продажу квитків з авторизацією через Google та
-                  інтеграцією платіжної системи Stripe. Backend на ASP.NET з
-                  дотриманням принципів SOLID, покрито unit-тестами. Frontend на
-                  Next.js з TypeScript-типами з Swagger. Docker-деплой на Azure
-                  VM через ACR з Nginx reverse proxy.
+                <p class="card-description">
+                  Курсова робота 3-го курсу. Десктопний додаток "Магазин зброї":
+                  авторизація, головне вікно адміна та касира, ролі через MySQL.
+                  Перший досвід з Qt framework.
                 </p>
-                <h4>Архітектурні рішення</h4>
-                <ul>
-                  <li>Google OAuth 2.0 для авторизації</li>
-                  <li>Stripe SDK для платежів</li>
-                  <li>SOLID-архітектура ASP.NET backend</li>
-                  <li>MSTest unit-тести</li>
-                  <li>Nginx reverse proxy на Azure VM</li>
-                  <li>Azure Container Registry + Docker</li>
+                <figure class="card-media">
+                  <img
+                    src="images/preview-gunstore.png"
+                    alt="Превью застосунку GunStore"
+                    class="card-media-image"
+                  />
+                  <figcaption>GunStore — desktop app preview</figcaption>
+                </figure>
+                <ul class="card-stack">
+                  <li>C++</li>
+                  <li>Qt Framework</li>
+                  <li>MySQL</li>
+                  <li>SQL Procedures</li>
                 </ul>
-              </div>
-              <aside>
-                <div>
-                  <h4>Стек технологій</h4>
-                  <ul>
-                    <li>Next.js</li>
-                    <li>ASP.NET</li>
-                    <li>Stripe SDK</li>
-                    <li>MongoDB</li>
-                    <li>Azure Blob Storage</li>
-                    <li>Azure VM / ACR</li>
-                    <li>Docker / Nginx</li>
-                    <li>ShadcnUI / DiceUI</li>
-                    <li>TanStack Query</li>
-                    <li>MSTest</li>
-                  </ul>
-                </div>
-              </aside>
+              </article>
+
+              <article class="project-card" id="project-funfy">
+                <div class="card-tag">Oct 2023 &mdash; Mar 2024</div>
+                <h3 class="card-title">
+                  Funfy Forum
+                  <a
+                    href="https://github.com/Fyz-dev/funfy-forum"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-gh-link"
+                    aria-label="GitHub репозиторій Funfy Forum"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                </h3>
+                <p class="card-description">
+                  Reddit-подібний форум з деревоподібними коментарями,
+                  рекурсивними CTEs у PostgreSQL (Supabase), SWR-кешуванням та
+                  MDX-редактором.
+                </p>
+                <figure class="card-media">
+                  <img
+                    src="images/preview-funfy-forum.png"
+                    alt="Превью застосунку Funfy Forum"
+                    class="card-media-image"
+                  />
+                  <figcaption>Funfy Forum Preview</figcaption>
+                </figure>
+                <ul class="card-stack">
+                  <li>Next.js</li>
+                  <li>Supabase</li>
+                  <li>SWR</li>
+                  <li>MDXEditor</li>
+                </ul>
+              </article>
+
+              <article class="project-card" id="project-pureview">
+                <div class="card-tag">Aug 2023 &mdash; Sep 2023</div>
+                <h3 class="card-title">
+                  Pureview Tab
+                  <a
+                    href="https://github.com/Fyz-dev/pureview-tab"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-gh-link"
+                    aria-label="GitHub репозиторій Pureview Tab"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                      />
+                    </svg>
+                  </a>
+                </h3>
+                <p class="card-description">
+                  Chrome-розширення для заміни нової вкладки: шорткати, пошук та
+                  вибір зображень через Unsplash API. FloatingUI для tooltips.
+                </p>
+                <figure class="card-media">
+                  <div class="card-media-placeholder" aria-hidden="true">
+                    <span class="media-icon">{}</span>
+                  </div>
+                  <figcaption>Pureview Tab Preview</figcaption>
+                </figure>
+                <ul class="card-stack">
+                  <li>React</li>
+                  <li>MobX</li>
+                  <li>FloatingUI</li>
+                  <li>Unsplash API</li>
+                </ul>
+              </article>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Personal Projects -->
-      <section id="personal-projects">
-        <div>
-          <h2>Особисті проєкти</h2>
-          <div>
-            <article id="project-gunstore">
-              <div>Apr 2023 — Jun 2023</div>
-              <h3>
-                GunStore
-                <a
-                  href="https://github.com/Fyz-dev/GunStore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub репозиторій GunStore"
-                >
-                  <svg
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-                    />
-                  </svg>
-                </a>
-              </h3>
-              <p>
-                Курсова робота 3-го курсу. Десктопний додаток "Магазин зброї":
-                авторизація, головне вікно адміна та касира, ролі через MySQL.
-                Перший досвід з Qt framework.
-              </p>
-              <figure>
-                <img
-                  src="images/preview-gunstore.png"
-                  alt="Превью застосунку GunStore"
-                />
-                <figcaption>GunStore — desktop app preview</figcaption>
-              </figure>
-              <ul>
-                <li>C++</li>
-                <li>Qt Framework</li>
-                <li>MySQL</li>
-                <li>SQL Procedures</li>
-              </ul>
-            </article>
-
-            <article id="project-funfy">
-              <div>Oct 2023 — Mar 2024</div>
-              <h3>
-                Funfy Forum
-                <a
-                  href="https://github.com/Fyz-dev/funfy-forum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub репозиторій Funfy Forum"
-                >
-                  <svg
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57"
-                    />
-                  </svg>
-                </a>
-              </h3>
-              <p>
-                Reddit-подібний форум з деревоподібними коментарями,
-                рекурсивними CTEs у PostgreSQL (Supabase), SWR-кешуванням та
-                MDX-редактором.
-              </p>
-              <figure>
-                <img
-                  src="images/preview-funfy-forum.png"
-                  alt="Превью застосунку Funfy Forum"
-                />
-                <figcaption>Funfy Forum Preview</figcaption>
-              </figure>
-              <ul>
-                <li>Next.js</li>
-                <li>Supabase</li>
-                <li>SWR</li>
-                <li>MDXEditor</li>
-              </ul>
-            </article>
-
-            <article id="project-pureview">
-              <div>Aug 2023 — Sep 2023</div>
-              <h3>
-                Pureview Tab
-                <a
-                  href="https://github.com/Fyz-dev/pureview-tab"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub репозиторій Pureview Tab"
-                >
-                  <svg
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57"
-                    />
-                  </svg>
-                </a>
-              </h3>
-              <p>
-                Chrome-розширення для заміни нової вкладки: шорткати, пошук та
-                вибір зображень через Unsplash API. FloatingUI для tooltips.
-              </p>
-              <figure>
-                <div aria-hidden="true">
-                  <span>{}</span>
-                </div>
-                <figcaption>Pureview Tab Preview</figcaption>
-              </figure>
-              <ul>
-                <li>React</li>
-                <li>MobX</li>
-                <li>FloatingUI</li>
-                <li>Unsplash API</li>
-              </ul>
-            </article>
           </div>
+        </section>
+
+        <!-- Video Placeholder (multimedia requirement) -->
+        <section class="section section-media" id="media">
+          <div class="container">
+            <h2 class="section-title">Демонстрація</h2>
+            <figure class="media-figure">
+              <video controls width="100%" class="demo-video">
+                <source src="video/intro.mp4" type="video/mp4" />
+                Ваш браузер не підтримує відео.
+              </video>
+              <figcaption>
+                Демонстрація робочого процесу (відео-презентація)
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+
+      <aside class="page-sidebar social-nav" aria-label="Соціальні мережі">
+        <p class="social-nav-label">Мої соціальні мережі</p>
+        <ul class="social-nav-list">
+          <li>
+            <a
+              href="https://github.com/Fyz-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-nav-link"
+              aria-label="GitHub"
+              title="GitHub"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:vladislav.butenko.dev@gmail.com"
+              class="social-nav-link"
+              aria-label="Email"
+              title="Email"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="tel:+380000000000"
+              class="social-nav-link"
+              aria-label="Телефон"
+              title="Телефон"
+            >
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="site-footer page-footer">
+        <div class="container footer-inner">
+          <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
+          <nav aria-label="Footer навігація">
+            <ul class="footer-nav">
+              <li><a href="index.html">Головна</a></li>
+              <li><a href="about.html">Про мене</a></li>
+              <li><a href="projects.html">Проєкти</a></li>
+              <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+          </nav>
+          <p class="footer-contact">
+            <a href="mailto:vladislav.butenko.dev@gmail.com"
+              >vladislav.butenko.dev@gmail.com</a
+            >
+          </p>
         </div>
-      </section>
+      </footer>
+    </div>
 
-      <!-- Video Placeholder (multimedia requirement) -->
-      <section id="media">
-        <div>
-          <h2>Демонстрація</h2>
-          <figure>
-            <video controls>
-              <source src="video/intro.mp4" type="video/mp4" />
-              Ваш браузер не підтримує відео.
-            </video>
-            <figcaption>
-              Демонстрація робочого процесу (відео-презентація)
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </main>
+    <a href="#top" class="back-to-top" aria-label="Повернутися нагору"
+      >&#8593;</a
+    >
 
-    <aside aria-label="Соціальні мережі">
-      <p>Мої соціальні мережі</p>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/Fyz-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path
-                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a
-            href="mailto:vladislav.butenko.dev@gmail.com"
-            aria-label="Email"
-            title="Email"
-          >
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="tel:+380000000000" aria-label="Телефон" title="Телефон">
-            <svg
-              aria-hidden="true"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.76a16 16 0 0 0 6.24 6.24l1.31-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </aside>
+    <script>
+      var backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        function toggleBackToTop() {
+          if (window.scrollY > 320) {
+            backToTop.classList.add("visible");
+          } else {
+            backToTop.classList.remove("visible");
+          }
+        }
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-      <div>
-        <p>&copy; 2026 Vladislav Butenko. Всі права захищені.</p>
-        <nav aria-label="Footer навігація">
-          <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="about.html">Про мене</a></li>
-            <li><a href="projects.html">Проєкти</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-          </ul>
-        </nav>
-        <p>
-          <a href="mailto:vladislav.butenko.dev@gmail.com"
-            >vladislav.butenko.dev@gmail.com</a
-          >
-        </p>
-      </div>
-    </footer>
+        toggleBackToTop();
+        window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      }
+    </script>
   </body>
 </html>
