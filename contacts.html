@@ -379,6 +379,12 @@
     >
 
     <script>
+      document.querySelectorAll(".nav-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          document.getElementById("menu-toggle").checked = false;
+        });
+      });
+
       var backToTop = document.querySelector(".back-to-top");
       if (backToTop) {
         function toggleBackToTop() {
@@ -391,6 +397,17 @@
 
         toggleBackToTop();
         window.addEventListener("scroll", toggleBackToTop, { passive: true });
+      }
+
+      var form = document.getElementById("contact-form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var btn = form.querySelector(".btn-submit");
+          btn.textContent = "Надіслано!";
+          btn.disabled = true;
+          btn.classList.add("btn-sent");
+        });
       }
     </script>
   </body>

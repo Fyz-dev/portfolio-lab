@@ -508,6 +508,12 @@
     >
 
     <script>
+      document.querySelectorAll(".nav-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          document.getElementById("menu-toggle").checked = false;
+        });
+      });
+
       var backToTop = document.querySelector(".back-to-top");
       if (backToTop) {
         function toggleBackToTop() {
